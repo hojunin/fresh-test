@@ -3,5 +3,6 @@
   "editor.suggest.showStatusBar": true,
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "twind.enable": true
 }
