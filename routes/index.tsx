@@ -2,6 +2,7 @@
 import { h } from "preact";
 import { tw } from "@twind";
 import Counter from "../islands/Counter.tsx";
+import Counter2 from "../components/notIsland.tsx";
 
 export default function Home() {
   return (
@@ -11,8 +12,9 @@ export default function Home() {
         height="100px"
         alt="the fresh logo: a sliced lemon dripping with juice"
       />
-      <p class={tw`my-6`}>내가 블로그를 고쳐볼께 얍~</p>
+      <p class={tw`my-6`}>내가 블로그를 고쳐볼께 얍~!</p>
       <Counter start={3} />
+      <Counter2 start={3} />
     </div>
   );
 }
