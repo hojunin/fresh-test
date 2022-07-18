@@ -1,30 +1,6 @@
-/** @jsx h */
-import { h } from 'preact';
-import Layout from '../components/Layout/index.tsx';
-import { tw } from '@twind';
-import { css, theme } from 'twind/css';
-import PostCards from '../components/Post/PostCards.tsx';
+import { POST } from './types/posts.ts';
 
-const globalStyles = css({
-    ':global': {
-        h3: {
-            color: theme('colors.light.text'),
-            textDecoration: 'underline',
-        },
-    },
-});
-
-export default function Home() {
-    return (
-        <div className={tw(globalStyles)}>
-            <Layout>
-                <PostCards posts={dummyPost} />
-            </Layout>
-        </div>
-    );
-}
-
-const dummyPost = [
+const dummyPosts: POST[] = [
     {
         id: 1,
         title: '나는 포스트다',
@@ -48,3 +24,4 @@ const dummyPost = [
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF5muH6piXfKA2yUyMkJwm0mJq6O4lU-1mFA&usqp=CAU',
     },
 ];
+export { dummyPosts };
